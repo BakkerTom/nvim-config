@@ -1,4 +1,3 @@
-vim.g.mapleader = " " -- Sets the map leader to a space character.
 vim.o.number = true -- Enables line numbering.
 vim.o.relativenumber = true -- Enables relative line numbering.
 vim.o.wrap = false -- Disables line wrapping.
@@ -20,15 +19,5 @@ vim.o.showmode = false -- Disables the display of the current mode.
 vim.o.showtabline = 2 -- Shows the tabline with tabs.
 vim.o.signcolumn = 'yes' -- Always shows the sign column.
 vim.o.mouse = 'a' -- Enables mouse support in all modes.
-
-
--- Use macOS clipboard
-vim.o.clipboard = 'unnamedplus'
-
-vim.api.nvim_set_keymap('n', 'vs', ':vs<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'sp', ':sp<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tn', ':tabnew<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tk', ':tabnext<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'tj', ':tabprev<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', 'to', ':tabo<CR>', { noremap = true })
+vim.o.clipboard = 'unnamedplus' -- Use macOS clipboard
 

@@ -1,7 +1,11 @@
-require('basics')
+require('settings')
+require('keybindings')
+
 require('colors')
+
 require('statusline')
-require('coc-config')
+
+require('language-server')
 require('autocomplete')
 require('telescope-config')
 
