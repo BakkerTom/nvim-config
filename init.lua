@@ -8,6 +8,7 @@ require('statusline')
 require('language-server')
 require('autocomplete')
 require('telescope-config')
+require('git')
 
 -- Disable netrw
 vim.g.loaded_netrw = 1
@@ -66,11 +67,6 @@ return require('packer').startup(function()
       require"surround".setup { mappings_style = "surround" }
     end
   }
-  use { 
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  use { 'lewis6991/gitsigns.nvim' }
 end)
 
