@@ -31,3 +31,9 @@ nm('<C-F>', "<cmd>Telescope live_grep<CR>")    -- Find a string in a project
 nm('tq', "<cmd>Telescope buffers<CR>")         -- Show all buffers
 nm('ta', "<cmd>Telescope<CR>")                 -- Show all commands
 -- }}
+
+-- NvimTree {{
+nm('<leader>b', '<cmd>NvimTreeToggle<CR>') -- Toggle file explorer
+-- }}
+
+
