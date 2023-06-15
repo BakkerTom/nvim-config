@@ -20,4 +20,6 @@ vim.o.showtabline = 2 -- Shows the tabline with tabs.
 vim.o.signcolumn = 'yes' -- Always shows the sign column.
 vim.o.mouse = 'a' -- Enables mouse support in all modes.
 vim.o.clipboard = 'unnamedplus' -- Use macOS clipboard
+vim.g.loaded_netrw = 1 -- Disable netrw
+vim.g.loaded_netrwPlugin = 1
 

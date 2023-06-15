@@ -20,3 +20,11 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
+nvim_lsp.lua_ls.setup {
+  diagnostics = {
+    globals = {
+      "vim", "require"
+    }
+  }
+}
+

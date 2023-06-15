@@ -9,11 +9,6 @@ require('language-server')
 require('autocomplete')
 require('telescope-config')
 require('git')
-
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   ignore_install = { "phpdoc" },
@@ -33,9 +28,8 @@ require'nvim-treesitter.configs'.setup {
 }
 require('nvim-tree').setup()
 
-return require('packer').startup(function() 
+return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -45,6 +39,8 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use {
     'nvim-lualine/lualine.nvim',
