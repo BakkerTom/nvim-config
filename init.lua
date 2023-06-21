@@ -3,7 +3,6 @@ require('keybindings')
 
 require('colors')
 
-require('statusline')
 
 require('language-server')
 require('autocomplete')
@@ -11,7 +10,7 @@ require('telescope-config')
 require('git')
 require('formatting')
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   ignore_install = { "phpdoc" },
   context_commentstring = {
@@ -30,20 +29,24 @@ require'nvim-treesitter.configs'.setup {
 }
 require('nvim-tree').setup()
 
+require('statusline')
+require('tabline')
+
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-buffer'   -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
+  use 'hrsh7th/nvim-cmp'     -- Completion
   use 'neovim/nvim-lspconfig'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
   use { 'catppuccin/nvim', as = 'catppuccin' }
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -51,9 +54,9 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use { 
+  use {
     'nvim-tree/nvim-tree.lua',
-    config = function ()
+    config = function()
       require('nvim-tree').setup()
     end
   }
@@ -62,9 +65,8 @@ return require('packer').startup(function()
   use {
     "ur4ltz/surround.nvim",
     config = function()
-      require"surround".setup { mappings_style = "surround" }
+      require "surround".setup { mappings_style = "surround" }
     end
   }
   use { 'lewis6991/gitsigns.nvim' }
 end)
-
