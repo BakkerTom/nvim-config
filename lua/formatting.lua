@@ -6,11 +6,16 @@ local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
   sources = {
+    -- Formatting
     formatting.prettier,
-    formatting.stylua
+    formatting.stylua,
+
+    -- Diagnostics
+    diagnostics.eslint
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then

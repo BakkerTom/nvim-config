@@ -57,7 +57,13 @@ return require('packer').startup(function()
   use {
     'nvim-tree/nvim-tree.lua',
     config = function()
-      require('nvim-tree').setup()
+      require('nvim-tree').setup({
+        update_focused_file = {
+          enable = false,
+          update_root = false,
+          ignore_list = {},
+        },
+      })
     end
   }
   use 'tpope/vim-commentary'

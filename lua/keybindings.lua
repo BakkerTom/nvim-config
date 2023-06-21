@@ -34,5 +34,6 @@ nm('ta', "<cmd>Telescope<CR>")                 -- Show all commands
 -- }}
 
 -- NvimTree {{
-nm('<leader>b', '<cmd>NvimTreeToggle<CR>') -- Toggle file explorer
+nm('<leader>b', '<cmd>NvimTreeToggle<CR>')   -- Toggle file explorer
+nm('<leader>f', '<cmd>NvimTreeFindFile<CR>') -- Find file in the file explorer
 -- }}
