@@ -19,10 +19,10 @@ nm('sp', ':sp<CR>') -- Split horizontally
 
 
 -- Tabs {{
-nm('tn', ':tabnew<CR>')  -- New tab
-nm('tk', ':tabnext<CR>') -- Next tab
-nm('tj', ':tabprev<CR>') -- Previous tab
-nm('to', ':tabo<CR>')    -- Close other tabs
+nm('tn', ':tabnew<CR>')              -- New tab
+nm('tk', ':BufferLineCycleNext<CR>') -- Next tab
+nm('tj', ':BufferLineCyclePrev<CR>') -- Previous tab
+nm('to', ':tabo<CR>')                -- Close other tabs
 -- }}
 
 -- Telescope {{
@@ -36,5 +36,3 @@ nm('ta', "<cmd>Telescope<CR>")                 -- Show all commands
 -- NvimTree {{
 nm('<leader>b', '<cmd>NvimTreeToggle<CR>') -- Toggle file explorer
 -- }}
-
-
