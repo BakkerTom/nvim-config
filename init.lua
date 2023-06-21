@@ -9,6 +9,8 @@ require('language-server')
 require('autocomplete')
 require('telescope-config')
 require('git')
+require('formatting')
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   ignore_install = { "phpdoc" },
