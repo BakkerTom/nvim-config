@@ -1,7 +1,7 @@
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 
-telescope.setup{
+telescope.setup {
   pickers = {
     find_files = {
       theme = "dropdown",
@@ -16,3 +16,4 @@ telescope.setup{
   }
 }
 
+telescope.load_extension('live_grep_args')

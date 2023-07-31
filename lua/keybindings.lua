@@ -26,11 +26,12 @@ nm('to', ':tabo<CR>')                -- Close other tabs
 -- }}
 
 -- Telescope {{
-nm('gd', "<cmd>Telescope lsp_definitions<CR>") -- Go to decleration
-nm('<C-P>', "<cmd>Telescope find_files<CR>")   -- Search for a file
-nm('<C-F>', "<cmd>Telescope live_grep<CR>")    -- Find a string in a project
-nm('tq', "<cmd>Telescope buffers<CR>")         -- Show all buffers
-nm('ta', "<cmd>Telescope<CR>")                 -- Show all commands
+nm('gd', "<cmd>Telescope lsp_definitions<CR>")                                               -- Go to decleration
+nm('<C-P>', "<cmd>Telescope find_files<CR>")                                                 -- Search for a file
+nm('<C-F>', "<cmd>:lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>") -- Find a string in a project
+nm('tq', "<cmd>Telescope buffers<CR>")                                                       -- Show all buffers
+nm('ta', "<cmd>Telescope<CR>")                                                               -- Show all commands
+nm('gr', '<cmd> Telescope lsp_references<CR>')
 -- }}
 
 -- NvimTree {{
