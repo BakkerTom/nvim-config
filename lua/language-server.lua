@@ -1,5 +1,15 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
+local status, mason = pcall(require, "mason")
 if (not status) then return end
+
+mason.setup()
+
+local lsp_status, mason_lspconfig = pcall(require, "mason-lspconfig")
+if (not lsp_status) then return end
+
+mason_lspconfig.setup()
+
+local lspconf_status, nvim_lsp = pcall(require, "lspconfig")
+if (not lspconf_status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
@@ -20,6 +30,8 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
+nvim_lsp.pyright.setup {}
+
 nvim_lsp.lua_ls.setup {
   diagnostics = {
     globals = {
@@ -27,4 +39,3 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
-
